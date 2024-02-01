@@ -1,0 +1,401 @@
+@import url("https://fonts.googleapis.com/css2?family=Montserrat:wght@100;200;300;400;500;600&family=Poppins:wght@100;200;300;400;500;600;700&display=swap");
+@import url("https://fonts.googleapis.com/css2?family=Montserrat:wght@100;200;300;400;500;600&family=Poppins:wght@100;200;300;400;500;600;700&family=Workbench&display=swap");
+@import url("https://fonts.googleapis.com/css2?family=Honk&family=Montserrat:wght@100;200;300;400;500;600&family=Poppins:wght@100;200;300;400;500;600;700&family=Workbench&display=swap");
+
+* {
+  padding: 0;
+  margin: 0;
+  outline: none;
+  border: none;
+  box-sizing: border-box;
+}
+
+body {
+  margin: 0;
+  padding: 0;
+  font-family: "Montserrat", sans-serif;
+}
+
+.nav {
+  padding: 2rem;
+}
+
+.nav .links {
+  position: absolute;
+  left: 50%;
+  transform: translate(-50%, 0);
+  display: flex;
+  flex-direction: row;
+  gap: 5rem;
+}
+
+.nav .links a,
+.connect a {
+  text-decoration: none;
+  font-size: 20px;
+  cursor: pointer;
+  padding: 1rem;
+}
+
+.nav .links .button {
+  color: #fff;
+  background-color: aqua;
+  padding-left: 1.5rem;
+  padding-right: 1.5rem;
+  background: rgb(131, 58, 180);
+  background: linear-gradient(
+    90deg,
+    rgba(131, 58, 180, 1) 0%,
+    rgba(253, 29, 29, 1) 50%,
+    rgba(252, 176, 69, 1) 100%
+  );
+}
+
+.nav .links .icon {
+  font-weight: 500;
+  font-size: 24px;
+}
+
+.connect .icon {
+  font-weight: 500;
+  font-size: 32px;
+}
+
+.nav .logo {
+  margin-right: 2rem;
+  transform: translate(-50%, 15%);
+  position: absolute;
+  display: block;
+  right: 0;
+}
+
+.nav .logo img {
+  border-radius: 50%;
+  width: 40px;
+  height: 40px;
+  object-fit: cover;
+}
+
+.nav .logo img:hover {
+  border-width: 3px;
+  border-style: solid;
+  border-image: linear-gradient(
+    90deg,
+    rgba(131, 58, 180, 1) 0%,
+    rgba(253, 29, 29, 1) 50%,
+    rgba(252, 176, 69, 1) 100%
+  );
+  transition: border 0.3s ease-in-out;
+}
+
+.profile {
+  padding: 2rem 5rem;
+  margin-top: 5rem;
+  background-image: url(profile.avif);
+  background-position: bottom;
+  background-size: contain;
+}
+
+.profile h4 {
+  font-size: 32px;
+  font-weight: 800;
+  font-family: "Workbench", sans-serif;
+  letter-spacing: 1rem;
+  animation-name: place;
+  animation-duration: 0.6s;
+  animation-iteration-count: infinite;
+  animation-direction: alternate;
+  margin-bottom: 1rem;
+}
+
+.profile h5 {
+  font-size: 24px;
+  font-weight: 600;
+  color: #fff;
+  animation-name: place;
+  animation-duration: 0.6s;
+}
+
+.profile p {
+  margin-top: 0.5rem;
+  font-size: 20px;
+  font-family: "Honk", sans-serif;
+  animation-name: place;
+  animation-duration: 0.6s;
+}
+
+.desc {
+  margin: auto;
+  padding: 2rem;
+  max-width: 900px;
+  position: relative;
+  overflow: hidden;
+  /* background-color: #2d4059;
+  color: #fff; */
+}
+
+.desc h5 {
+  margin-top: 1rem;
+}
+
+/* .local h5::before {
+  content: "";
+  position: absolute;
+  height: 2px;
+  width: 0;
+  bottom: 0;
+  left: 0;
+  background-color: #1d4ed8;
+  transition: all 0.3s ease;
+}
+
+.local:hover h5::before {
+  width: 70%;
+} */
+.local:hover {
+  scale: 1.05;
+  transition: all 0.3s ease;
+}
+
+.desc p {
+  margin-top: 0.5rem;
+  line-height: 1.5rem;
+}
+
+.desc svg {
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+  z-index: -100;
+}
+
+.desc .line,
+.display .line {
+  border-top: 1px solid #c4c1e0;
+  margin-top: 1rem;
+  margin-bottom: 1rem;
+}
+
+.connect {
+  padding: 1rem;
+  display: flex;
+  justify-content: center;
+  gap: 2rem;
+}
+
+.skill-list {
+  /* background: linear-gradient(90deg, #efd5ff 0%, #515ada 100%); */
+  /* background: linear-gradient(90deg, #c67700 0%, #fcff9e 100%); */
+  /* background: linear-gradient(90deg, #d53369 0%, #daae51 100%); */
+  margin: auto;
+  margin-top: 1rem;
+  padding: 1rem 5rem;
+  display: flex;
+  flex-direction: row;
+  justify-content: space-around;
+  gap: 2rem;
+  flex-wrap: wrap;
+}
+
+.skill-list .skill {
+  min-width: 150px;
+  background-size: contain;
+  aspect-ratio: 3.5/2;
+}
+
+.skill-list h5 {
+  margin-bottom: 0.5rem;
+}
+
+.skill-list .git {
+  background-image: url(git.jpg);
+}
+
+.skill-list .linux {
+  background-image: url(ubuntu.webp);
+}
+
+.skill-list .frontend {
+  background-image: url(front-end-stack.png);
+}
+
+.skill-list .python {
+  background-image: url(Python-Symbol.png);
+}
+
+.skill-list .sql {
+  background-image: url(sql.png);
+}
+
+.skill-list .devops {
+  background-image: url(devops.jpg);
+}
+
+.hide {
+  display: none;
+}
+
+.motion {
+  position: relative;
+}
+
+.motion .carGame {
+  position: absolute;
+  width: 100%;
+  height: 100vh;
+  scale: 0.4;
+  top: -10rem;
+  background-image: url("assets/images/bg.jpg");
+  background-repeat: no-repeat;
+  background-size: 100% 100%;
+}
+.car,
+.enemyCar {
+  width: 50px;
+  height: 70px;
+  background: red;
+  position: absolute;
+  bottom: 120px;
+  background-image: url("assets/images/car.png");
+  background-repeat: no-repeat;
+  background-size: 100% 100%;
+}
+.roadLines {
+  width: 10px;
+  height: 100px;
+  position: absolute;
+  background: white;
+  margin-left: 195px; /* show line in center = (gameArea.width / 2) - (roadLines.width / 2) */
+}
+.gameArea {
+  width: 400px;
+  height: 100vh;
+  background: #2d3436;
+  margin: auto;
+  position: relative;
+  overflow: hidden;
+  border-right: 7px dashed #c8d6e5;
+  border-left: 7px dashed #c8d6e5;
+}
+.score {
+  position: absolute;
+  top: 15px;
+  left: 40px;
+  background: #10ac84;
+  width: 300px;
+  line-height: 70px;
+  text-align: center;
+  color: white;
+  font-size: 1.5em;
+  box-shadow: 0 5px 5px #777;
+}
+.startScreen {
+  position: absolute;
+  background-color: #ee5253;
+  left: 50%;
+  top: 50%;
+  transform: translate(-50%, -50%);
+  color: white;
+  z-index: 1;
+  text-align: center;
+  border: 1px solid #ff6b6b;
+  padding: 15px;
+  margin: auto;
+  width: 50%;
+  cursor: pointer;
+  letter-spacing: 5;
+  font-size: 20px;
+  word-spacing: 3;
+  line-height: 30px;
+  text-transform: uppercase;
+  box-shadow: 0 5px 5px #777;
+}
+.level button {
+  padding: 7px;
+  font-size: 14px;
+  background: white;
+  border: 1px solid orangered;
+  border-radius: 10px;
+  width: 80px;
+  cursor: pointer;
+  outline: none;
+  box-shadow: 0 5px 5px #777777a6;
+}
+
+.display {
+  padding: 2rem 5rem;
+}
+
+.display h5 {
+  margin-bottom: 1rem;
+}
+
+.display .repo-links {
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: space-between;
+  gap: 1rem;
+}
+
+.display .repo-links .repo {
+  width: 45%;
+}
+
+.repo a {
+  display: block;
+  font-size: 12px;
+}
+
+@keyframes place {
+  from {
+    transform: translate3d(0, 0.5rem, 0);
+  }
+  to {
+    transform: translate3d(0, 0, 0);
+    /* color: #fff; */
+  }
+}
+
+@media only screen and (max-width: 644px) {
+  .nav .logo {
+    display: none;
+  }
+
+  .profile,
+  .display {
+    padding: 2rem;
+  }
+
+  .profile h4 {
+    font-size: 18px;
+    letter-spacing: 0.5rem;
+  }
+
+  .profile h5 {
+    font-size: 16px;
+  }
+
+  .profile p {
+    font-size: 16px;
+  }
+
+  .desc p {
+    font-size: 12px;
+  }
+}
+
+@media only screen and (max-width: 524px) {
+  .skill-list {
+    padding: 1rem 2rem;
+  }
+  .skill-list .skill {
+    min-width: 100px;
+  }
+}
+
+@media only screen and (max-width: 898px) {
+  .display .repo-links .repo {
+    width: 100%;
+  }
+}
